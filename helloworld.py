@@ -1,13 +1,12 @@
 # APENAS UM EXEMPLO DE CÓDIGO PARA TESTAR O AMBIENTE DE DESENVOLVIMENTO
 import os
-from dotenv import load_dotenv
 from netmiko import ConnectHandler
 
 #loads the environment variables from the .env file
-load_dotenv() 
+
 
 #Retrieve the password from the environment variable. 
-secret_password = os.getenv("Costa_Lab_password")
+secret_password = os.environ.get("Costa_Lab_password")
 
 
 router_cisco = {
